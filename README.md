@@ -4,14 +4,17 @@
 #### Modern Meteor Deployment to Linux
 *We don't need no stinken dock, for we don't have a boat*
 
-***!!! WIP !!!***
 
 Up Your Meteor (upyoume for short) is a command line tool that allows you to deploy [Meteor](http://meteor.com)(1.3+) app to your own linux server. It has only been tested on Ubuntu 16.04 but should work on other systemd based linux distributions.
 
 You can use install and use Up Your Meteor from Linux, Mac and <s>Windows.</s>
 
-## The below is from Meteor Up
-*This all and needs to get edited, for a lot of the features are pulled out and left up to the user to configure on their server to their liking.*
+> WIP !!! <br/>
+> This is a modified version of [Meteor Up](https://github.com/arunoda/meteor-up) that uses more up to date tools and is meant to run on systemd based linux distributions (i.e. Ubuntu 16.04)
+
+
+## The below is from [Meteor Up](https://github.com/arunoda/meteor-up)
+*This all and needs to get edited, for a lot of the features are pulled out and left up to the user to configure on the server to their liking.*
 
 **Table of Contents**
 

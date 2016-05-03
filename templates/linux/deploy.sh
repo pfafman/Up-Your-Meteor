@@ -116,7 +116,14 @@ sudo service <%= appName %> stop || :
 sudo service <%= appName %> start || :
 
 echo "Waiting for <%= deployCheckWaitTime %> seconds while app is booting up"
-sleep <%= deployCheckWaitTime %>
+
+COUNTER=0
+while [  $COUNTER -lt 10 ]; do
+   echo The counter is $COUNTER
+   let COUNTER=COUNTER+1
+   sleep <%= deployCheckWaitTime %>
+   curl localhost:${PORT} && let COUNTER=10
+done
 
 echo "Checking is app booted or not?"
 curl localhost:${PORT} || revert_app

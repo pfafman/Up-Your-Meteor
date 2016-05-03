@@ -11,6 +11,8 @@ console.log('\nUp Your Meteor: Meteor Deployments'.bold.blue);
 console.log('--------------------------------------------------------------------\n'.bold.blue);
 
 var action = process.argv[2];
+var option = process.argv[3];
+
 if(action == 'init') {
   //special setup for init
   ActionsRegistry.init();
@@ -25,7 +27,7 @@ if(action == 'init') {
 function runActions(config, cwd) {
   var actionsRegistry = new ActionsRegistry(config, cwd);
   if(actionsRegistry[action]) {
-    actionsRegistry[action]();
+    actionsRegistry[action](option);
   } else {
     if(typeof action !== "undefined") {
       var errorMessage = 'No Such Action Exists: ' + action;
