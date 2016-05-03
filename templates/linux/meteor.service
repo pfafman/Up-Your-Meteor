@@ -1,0 +1,18 @@
+[Unit]
+Description=<%= appName %>
+After=syslog.target network.target
+
+
+[Service]
+#Type=forking
+#LimitNOFILE=131072
+Environment=USERDOWN_UID=meteoruser 
+Environment=USERDOWN_GID=meteoruser"
+EnvironmentFile=-/opt/<%= appName %>/config/env.sh
+#ExecStartPre=/usr/local/sbin/hitch -t $HITCH_OPTIONS
+ExecStart=/usr/local/bin/userdown /opt/<%= appName %>/app/main.js
+ExecReload=/bin/kill -HUP $MAINPID
+Restart=on-failure
+
+[Install]
+WantedBy=multi-user.target
