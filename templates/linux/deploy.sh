@@ -78,7 +78,8 @@ revert_app (){
 # logic
 set -e
 
-TMP_DIR=/opt/<%= appName %>/tmp
+APP_DIR=/opt/<%= appName %>
+TMP_DIR=${APP_DIR}/tmp
 BUNDLE_DIR=${TMP_DIR}/bundle
 
 cd ${TMP_DIR}
@@ -89,7 +90,8 @@ sudo chown -R ${USER} ${BUNDLE_DIR}
 
 # setting up NPMs
 cd ${BUNDLE_DIR}/programs/server
-
+echo "Reinstall npm modules"
+sudo rm -rf node_modules
 sudo npm install
 
 cd /opt/<%= appName %>/
