@@ -92,6 +92,10 @@ sudo chown -R ${USER} ${BUNDLE_DIR}
 cd ${BUNDLE_DIR}/programs/server
 echo "Reinstall npm modules"
 sudo rm -rf node_modules
+
+sudo chown -R ${USER} ~/.node-gyp
+sudo chown -R ${USER} ~/.npm
+
 npm install
 
 cd /opt/<%= appName %>/
