@@ -1,9 +1,9 @@
 {
   "name": "upyoume",
-  "version": "0.1.1",
+  "version": "0.1.2",
   "description": "Meteor Deployments",
   "dependencies": {
-    "async": "^0.9.0",
+    "async": "^2.6.0",
     "cjson": "^0.3.x",
     "colors": "^0.6.x",
     "nodemiral": "^1.1.1",
