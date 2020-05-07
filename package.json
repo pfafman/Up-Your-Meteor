@@ -3,14 +3,14 @@
   "version": "0.1.2",
   "description": "Meteor Deployments",
   "dependencies": {
-    "archiver": "^1.x.x",
-    "async": "^2.6.3",
-    "cjson": "^0.3.x",
-    "colors": "^0.6.x",
+    "archiver": "^3.1.1",
+    "async": "^3.2.0",
+    "cjson": "^0.5.0",
+    "colors": "^1.4.0",
     "nodemiral": "^1.1.1",
-    "rimraf": "^2.7.1",
-    "underscore": "^1.7.0",
-    "uuid": "^1.4.x"
+    "rimraf": "^3.0.2",
+    "underscore": "^1.10.2",
+    "uuid": "^3.4.0"
   },
   "bin": {
     "upyoume": "./bin/upyoume"
