@@ -95,14 +95,19 @@ sudo chown -R ${USER} ${BUNDLE_DIR}
 # setting up NPMs
 cd ${BUNDLE_DIR}/programs/server
 echo "Reinstall npm modules"
+
 echo "Remove node_modules"
 sudo rm -rf node_modules
 
+echo "Fix Permissions to user ${USER}"
 sudo chown -R ${USER} ~/.node-gyp
 sudo chown -R ${USER} ~/.npm
+sudo chown -R ${USER} *
+sudo chmod 755 package.json
+sudo chmod 755 npm-shrinkwrap.json
 
-echo "Remove node_modules (again?)"
-sudo rm -rf node_modules
+# echo "Remove node_modules (again?)"
+# sudo rm -rf node_modules
 
 echo "npm install"
 npm install
