@@ -1,6 +1,6 @@
 {
   "name": "upyoume",
-  "version": "0.1.2",
+  "version": "1.0.0",
   "description": "Meteor Deployments",
   "dependencies": {
     "@zodern/nodemiral": "^1.4.1",
